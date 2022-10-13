@@ -15,11 +15,6 @@ print(t.to_string())
 e = mypkg.get_et()
 print(e.to_string())
 
-# import time
-# time.sleep(5*60)
-
-# import keyboard
-
 while True:
     input("Press enter to exit:\n")
     break
