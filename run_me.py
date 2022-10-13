@@ -22,3 +22,4 @@ print(e.to_string())
 
 while True:
     input("Press enter to exit:\n")
+    break
