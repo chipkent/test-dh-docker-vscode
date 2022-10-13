@@ -20,6 +20,11 @@ def exec_test():
 
 exec("exec_test()")
 
+def breakpoint_func():
+    return 1
+
+t2 = t.update("Y=breakpoint_func()")
+
 while True:
     input("Press enter to exit:\n")
     break
