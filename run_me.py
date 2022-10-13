@@ -15,6 +15,11 @@ print(t.to_string())
 e = mypkg.get_et()
 print(e.to_string())
 
+def exec_test():
+    print("In Exec Test")
+
+exec("exec_test()")
+
 while True:
     input("Press enter to exit:\n")
     break
