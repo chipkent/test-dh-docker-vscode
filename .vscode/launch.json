@@ -16,13 +16,19 @@
             "name": "Python: Attach 10001",
             "type": "python",
             "request": "attach",
-            "program": "${file}",
+            // "program": "${file}",
             "console": "integratedTerminal",
             // "justMyCode": false
             "connect": {
                 "host": "localhost",
                 "port": 10001
-            }
+            },
+            "pathMappings": [
+                {
+                    "localRoot": "${workspaceFolder}",
+                    "remoteRoot": "/app"
+                }
+            ],
         }
     ]
 }
