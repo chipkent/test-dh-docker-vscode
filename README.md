@@ -22,3 +22,9 @@ To make this work:
 1. Click on the green `><` icon in the bottom left, and select `Open Folder in Container...`
 
 Now, your VS Code development session will happen inside of a standardized container.
+
+## Remote debugging
+
+1. Run `docker compose up --build` from the console.
+2. Launch `Python: Attach 10001` from the VS Code Run/Debug window.
+3. 
