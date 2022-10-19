@@ -5,7 +5,7 @@ FROM ubuntu:22.04
 RUN apt update && \
     apt install -y openjdk-11-jdk && \
     ln -s /usr/lib/jvm/java-11-openjdk-*/ /usr/lib/jvm/java-11-openjdk && \
-    apt install --yes git python3-pip 
+    apt install --yes git python3-pip curl
     # && \
     # apt install --yes git python3-venv python3-pip curl unzip && \
     # pip3 install --upgrade pip setuptools wheel build debugpy
@@ -24,5 +24,5 @@ RUN pip3 install -r requirements.txt
 
 # Now copy in our code, and run it
 COPY . /app
-EXPOSE 10000
-EXPOSE 10001
+# EXPOSE 10000
+# EXPOSE 10001

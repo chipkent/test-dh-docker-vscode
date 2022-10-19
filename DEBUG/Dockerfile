@@ -4,4 +4,4 @@ RUN apk add --no-cache nodejs
 RUN apk add --no-cache curl
 COPY . /app
 # CMD ["/usr/bin/node", "/app/app.js"]
-EXPOSE 8080/tcp
+# EXPOSE 8080/tcp
