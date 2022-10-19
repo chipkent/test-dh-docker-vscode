@@ -11,8 +11,6 @@ services:
       - ./storage:/storage
     environment:
       - JAVA_OPTS=-Xmx4g
-    # command: sh -c "echo "baeldung""
     command: python3 run_me.py
-    # command: python3 webserver.py
     stdin_open: true
     tty: true
