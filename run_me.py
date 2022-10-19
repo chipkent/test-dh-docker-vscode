@@ -1,3 +1,40 @@
+# Python 3 server example
+from http.server import BaseHTTPRequestHandler, HTTPServer
+import time
+import sys
+
+hostName = "localhost"
+serverPort = 10000
+
+class MyServer(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.send_header("Content-type", "text/html")
+        self.end_headers()
+        self.wfile.write(bytes("<html><head><title>https://pythonbasics.org</title></head>", "utf-8"))
+        self.wfile.write(bytes("<p>Request: %s</p>" % self.path, "utf-8"))
+        self.wfile.write(bytes("<body>", "utf-8"))
+        self.wfile.write(bytes("<p>This is an example web server.</p>", "utf-8"))
+        self.wfile.write(bytes("</body></html>", "utf-8"))
+        sys.stdout.flush()
+
+if __name__ == "__main__":        
+    webServer = HTTPServer((hostName, serverPort), MyServer)
+    print("Server started http://%s:%s" % (hostName, serverPort))
+    sys.stdout.flush()
+
+    try:
+        webServer.serve_forever()
+    except KeyboardInterrupt:
+        pass
+
+    webServer.server_close()
+    print("Server stopped.")
+    sys.stdout.flush()
+
+
+
+
 
 # import debugpy
 # debugpy.configure(subProcess=False)
@@ -15,6 +52,22 @@
 # import debugpy
 # debugpy.debug_this_thread()
 
+print("In run_me.py")
+import sys
+sys.stdout.flush()
+
+# import pydevd
+# import debugpy
+# pydevd = debugpy._vendored.import_module("pydevd")
+# pydevd.settrace(suspend=False, trace_only_current_thread=False)
+
+import debugpy
+debugpy.listen(10001)
+debugpy.wait_for_client()
+debugpy.breakpoint()
+
+print("after breakpoint")
+sys.stdout.flush()
 
 import sys
 print(f"Python version: {sys.version}")

@@ -10,7 +10,19 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "justMyCode": false
+            // "justMyCode": false
+        },
+        {
+            "name": "Python: Attach 10001",
+            "type": "python",
+            "request": "attach",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            // "justMyCode": false
+            "connect": {
+                "host": "localhost",
+                "port": 10001
+            }
         }
     ]
 }

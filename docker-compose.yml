@@ -5,8 +5,11 @@ services:
     build: .
     ports:
       - "${DEEPHAVEN_PORT:-10000}:10000"
+      - "10001:10001"
     volumes:
       - ./data:/data
       - ./storage:/storage
     environment:
       - JAVA_OPTS=-Xmx4g
+    # command: sh -c "echo "baeldung""
+    command: python3 run_me.py
