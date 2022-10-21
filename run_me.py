@@ -102,6 +102,14 @@ def exec_test():
 
 exec("exec_test()")
 
+def threading_test():
+    print(f"CALLING: threading_test thread={threading.get_ident()} thread={threading.current_thread()}")
+    print("In Threading Test")
+
+thread = threading.Thread(target = lambda: threading_test(), args=())
+thread.start()
+thread.join()
+
 def update_func():
     print(f"CALLING: update_func thread={threading.get_ident()} thread={threading.current_thread()}")
     return 1
