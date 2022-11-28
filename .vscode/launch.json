@@ -29,6 +29,24 @@
                     "remoteRoot": "/app"
                 }
             ],
+        },
+        {
+            "name": "Python: Attach Host.Docker 10001",
+            "type": "python",
+            "request": "attach",
+            // "program": "${file}",
+            "console": "integratedTerminal",
+            // "justMyCode": false
+            "connect": {
+                "host": "host.docker.internal",
+                "port": 10001
+            },
+            "pathMappings": [
+                {
+                    "localRoot": "${workspaceFolder}",
+                    "remoteRoot": "/app"
+                }
+            ],
         }
     ]
 }

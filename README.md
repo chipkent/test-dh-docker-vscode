@@ -26,5 +26,4 @@ Now, your VS Code development session will happen inside of a standardized conta
 ## Remote debugging
 
 1. Run `docker compose up --build` from the console.
-2. Launch `Python: Attach 10001` from the VS Code Run/Debug window.
-3. 
+2. Launch `Python: Attach 10001` or `Python: Attach Host.Docker 10001` from the VS Code Run/Debug window.  The first probably works for Linux, and the second works for Mac.
